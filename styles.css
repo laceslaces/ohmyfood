@@ -1,8 +1,12 @@
-header { 
+.header { 
     color: #9356DC; 
     font-family: 'Merriweather', serif;
     font-family: 'Raleway', sans-serif; 
-
 }
+
+.BookMenu {
+    color:#9356DC;
+}
+
 
 
