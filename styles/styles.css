@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Raleway', sans-serif; 
+}
+
+
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: #FAF6F5;
+   padding: 2em;
+}
+
+/* BUTTON */
+
+.ExploreRestaurants {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Explore {
+    height: 3em;
+    border-style: solid;
+    border: #d26adb;
+    border-radius: 40px;
+    color: white;
+    background: #d26adb;
+    box-shadow: 20px 27px 30px -3px rgba(0,0,0,0.3);
+}
+
+/* BODY */
+
+.HowItWorks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Options div {
+    border-style: solid;
+    border-radius: 20px;
+    border: #100221;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    height: 2em;
+    width: 30em;
+}
+
+.Restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FoodCards div {
+    display: flex;
+    flex-direction: column; 
+    height: 5em;
+    width: 100%;
+    box-shadow: 12px 27px 15px -3px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A5A5A;
+    color: white;
+}
