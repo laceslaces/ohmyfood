@@ -1,17 +1,127 @@
+$primaryColor: #d26adb;
+$secondaryColor: #FAF6F5;
+$midBorderRadius: 40px;
+$shadow: 20px 27px 30px -3px rgba(0, 0, 0, 0.3);
+
+
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexCenterCol {
+    @include flexCenter(column);
+}
+
+header {
+    
+    @include flexCenterCol;
+
+    background-color: $secondaryColor;
+    padding: 2em;
+
+    .btnExplore {
+        height: 3em;
+        border-style: solid;
+        border: $primaryColor;
+        border-radius: $midBorderRadius;
+        color: white;
+        background: $primaryColor;
+        box-shadow: $shadow;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* BUTTON */
+.ExploreRestaurants {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnExplore {
+    height: 3em;
+    border-style: solid;
+    border: $primaryColor;
+    border-radius: 42px;
+    color: white;
+    background: $primaryColor;
+    box-shadow: $shadow
+}
+
+/* BODY */
+.HowItWorks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Options {
+    div {
+        border-style: solid;
+        border-radius: 20px;
+        border: #100221;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+        height: 2em;
+        width: 30em;
+    }
+}
+
+.Restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FoodCards {
+    div {
+        display: flex;
+        flex-direction: column;
+        height: 5em;
+        width: 100%;
+        box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A5A5A;
+    color: white;
+}
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #FAF6F5;
+    background-color: $secondaryColor;
     padding: 2em;
-     .btnExplore { 
+
+    .btnExplore {
         height: 3em;
         border-style: solid;
-        border: #d26adb;
-        border-radius: 40px;
+        border: $primaryColor;
+        border-radius: $midBorderRadius;
         color: white;
-        background: #d26adb;
-        box-shadow: 20px 27px 30px -3px rgba(0, 0, 0, 0.3);
+        background: $primaryColor;
+        box-shadow: $shadow
     }
-  }
+}
+
+
+/*# sourceMappingURL=styles.css.map */
