@@ -1,8 +1,11 @@
-$primaryColor: #d26adb;
-$secondaryColor: #FAF6F5;
+$primaryColor: #9356DC;
+$secondaryColor: #FF79DA;
+$tertiaryColor: #99E2D0; 
 $midBorderRadius: 40px;
 $shadow: 20px 27px 30px -3px rgba(0, 0, 0, 0.3);
-
+$logoFont: 'Shrikhand';
+$card-width: 300px;
+$card-height: 200px;
 
 
 @mixin flexCenter($direction){
@@ -16,32 +19,46 @@ $shadow: 20px 27px 30px -3px rgba(0, 0, 0, 0.3);
     @include flexCenter(column);
 }
 
+
 header {
-    
     @include flexCenterCol;
-
-    background-color: $secondaryColor;
-    padding: 2em;
-
-    .btnExplore {
-        height: 3em;
-        border-style: solid;
-        border: $primaryColor;
-        border-radius: $midBorderRadius;
-        color: white;
-        background: $primaryColor;
-        box-shadow: $shadow;
-    }
+    background-color: #f6f1f1d7;
+        .btnExplore {
+            height: 3em;
+            border-style: solid;
+            border: $primaryColor;
+            border-radius: $midBorderRadius;
+            color: white;
+            background: $primaryColor;
+            box-shadow: $shadow;
+        }
+        .Location {
+            @include flexCenterCol;
+            background-color: #ede7e7d4;
+            width: 100%;
+            height: 3em;
+            margin: 0em;
+        }   
 }
 
 * {
     box-sizing: border-box;
-    font-family: "Merriweather", serif;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;  
 }
 
+.logo {
+    @include flexCenterCol;
+    background-color: white;
+    width: 100%;
+    font-size: large;
+    height: 3em;
+        h1 {
+    font-family: $logoFont !important;
+    }
+}
 
 /* BUTTON */
+
 .ExploreRestaurants {
     display: flex;
     justify-content: center;
@@ -59,69 +76,89 @@ header {
 }
 
 /* BODY */
-.HowItWorks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.Options {
-    div {
-        border-style: solid;
-        border-radius: 20px;
-        border: #100221;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-        height: 2em;
-        width: 30em;
+.HowItWorks {
+    @include flexCenterCol;
+        .Options .num .select {
+            flex-direction: row;
+        }
+            .num {
+                border-style: solid;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: $primaryColor;
+                background-color: $primaryColor;
+                color: white;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                left: -20%;  
+            } 
+            .select {
+                border-style: solid;
+                border-radius: 20px;
+                border: #100221;
+                box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+                height: 2em;
+                width: 100%;
     }
 }
+
 
 .Restaurants {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.FoodCards {
-    div {
-        display: flex;
-        flex-direction: column;
-        height: 5em;
-        width: 100%;
-        box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
+    @include flexCenterCol;
+        .FoodCards div {
+            @include flexCenterCol; 
+            width: $card-width;
+            height: $card-height;
+            overflow: hidden;
+            box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            margin: 0.5em;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 65%;
+        }
+        .restName {
+            justify-content: left !important;
+            align-items: flex-start !important;
+            font-weight: bolder; 
+            padding: 0.5em;
+                p {
+                    font-weight: 100;
+                    margin: 0em;
+                }
+        }
     }
-}
+
+
+
 
 /* FOOTER */
+
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #5A5A5A;
+    background-color: #424141;
     color: white;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: $secondaryColor;
-    padding: 2em;
-
-    .btnExplore {
-        height: 3em;
-        border-style: solid;
-        border: $primaryColor;
-        border-radius: $midBorderRadius;
-        color: white;
-        background: $primaryColor;
-        box-shadow: $shadow
+    width: 100%;
+    padding: 1em;
+    gap: 0.5em;
+        h4 {
+            font-family: $logoFont;
+            font-weight: 20;
+            margin: 0.2em;
+            padding-left: 0.5em;
+        }
+        li {
+            list-style: none;
+            padding-left: 1em;
+            gap: 5em;
+        }
     }
-}
 
 
 /*# sourceMappingURL=styles.css.map */
