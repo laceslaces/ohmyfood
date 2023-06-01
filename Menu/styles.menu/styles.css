@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(241, 241, 241, 0.9058823529);
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  font-size: large;
+  height: 3em;
+}
+header .logo h1 {
+  font-family: "Shrikhand" !important;
+}
+
+.Dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+.Dishes .click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-style: solid;
+  border-radius: 20px;
+  border: #100221;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  height: 4em;
+  width: 100%;
+  font-weight: 600;
+}
+.Dishes .click p {
+  font-weight: 100;
+}
+
+.OrderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.OrderButton .btnExplore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 3em;
+  border-style: solid;
+  border: #9356DC;
+  border-radius: 40px;
+  color: white;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  padding-left: 4.5em;
+  padding-right: 4.5em;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #424141;
+  color: white;
+  width: 100%;
+  padding: 1em;
+  gap: 0.5em;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-weight: 20;
+  margin: 0.2em;
+  padding-left: 0.5em;
+}
+footer li {
+  list-style: none;
+  padding-left: 1em;
+  gap: 5em;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,36 +1,12 @@
+/* HEADER */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(246, 241, 241, 0.8431372549);
+  background-color: rgba(241, 241, 241, 0.9058823529);
 }
-header .btnExplore {
-  height: 3em;
-  border-style: solid;
-  border: #9356DC;
-  border-radius: 40px;
-  color: white;
-  background: #9356DC;
-  box-shadow: 20px 27px 30px -3px rgba(0, 0, 0, 0.3);
-}
-header .Location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgba(237, 231, 231, 0.831372549);
-  width: 100%;
-  height: 3em;
-  margin: 0em;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-.logo {
+header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,25 +16,42 @@ header .Location {
   font-size: large;
   height: 3em;
 }
-.logo h1 {
+header .logo h1 {
   font-family: "Shrikhand" !important;
 }
-
-/* BUTTON */
-.ExploreRestaurants {
+header .Location {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  background-color: rgba(230, 230, 230, 0.9058823529);
+  width: 100%;
+  height: 3em;
+  margin: 0em;
 }
-
-.btnExplore {
+header .Location .fa-location-dot {
+  padding-right: 1em;
+}
+header .ExploreRestaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2em;
+}
+header .btnExplore {
   height: 3em;
   border-style: solid;
   border: #9356DC;
-  border-radius: 42px;
+  border-radius: 40px;
   color: white;
-  background: #9356DC;
-  box-shadow: 20px 27px 30px -3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 /* BODY */
@@ -67,6 +60,9 @@ header .Location {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.HowItWorks h3 {
+  padding-right: 10em;
 }
 .HowItWorks .Options .num .select {
   flex-direction: row;
@@ -98,6 +94,9 @@ header .Location {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.Restaurants h3 {
+  padding-right: 10em;
 }
 .Restaurants .FoodCards div {
   display: flex;

@@ -1,0 +1,105 @@
+$primaryColor: #9356DC;
+$secondaryColor: #FF79DA;
+$tertiaryColor: #99E2D0; 
+$midBorderRadius: 40px;
+$shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+$logoFont: 'Shrikhand';
+$card-width: 300px;
+$card-height: 200px;
+
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexCenterCol {
+    @include flexCenter(column);
+}
+
+@mixin button {
+    height: 3em;
+        border-style: solid;
+        border: $primaryColor;
+        border-radius: $midBorderRadius;
+        color: white;
+        background: linear-gradient(170deg, $secondaryColor, $primaryColor);
+        box-shadow: $shadow;
+        padding-left: 4.5em;
+        padding-right: 4.5em;
+    }
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;  
+}
+
+
+header {
+    @include flexCenterCol;
+    background-color: #f1f1f1e7;
+    .logo {
+        @include flexCenterCol;
+        background-color: white;
+        width: 100%;
+        font-size: large;
+        height: 3em;
+            h1 {
+        font-family: $logoFont !important;
+        }
+    }
+}
+
+.Dishes {
+    @include flexCenterCol;
+    gap: 2em;
+        .click {
+            @include flexCenterCol;
+            border-style: solid;
+            border-radius: 20px;
+            border: #100221;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+            height: 4em;
+            width: 100%;
+            font-weight: 600;
+             p {
+                font-weight: 100;
+             }
+        }
+}
+
+
+.OrderButton {
+    @include flexCenterCol;
+    .btnExplore {
+        @include flexCenterCol;
+         @include button;
+}
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #424141;
+    color: white;
+    width: 100%;
+    padding: 1em;
+    gap: 0.5em;
+        h4 {
+            font-family: $logoFont;
+            font-weight: 20;
+            margin: 0.2em;
+            padding-left: 0.5em;
+        }
+        li {
+            list-style: none;
+            padding-left: 1em;
+            gap: 5em;
+        }
+    }
+
