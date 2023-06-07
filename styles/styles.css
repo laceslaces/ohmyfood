@@ -1,3 +1,102 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(241, 241, 241, 0.9058823529);
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  font-size: large;
+  height: 3em;
+}
+header .logo h1 {
+  font-family: "Shrikhand" !important;
+}
+
+.Dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: left;
+  align-items: flex-start;
+}
+.Dishes .click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-style: solid;
+  border-radius: 20px;
+  border: #100221;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  height: 4em;
+  width: 100%;
+  font-weight: 600;
+  justify-content: left;
+  align-items: flex-start;
+}
+.Dishes .click p {
+  font-weight: 100;
+}
+
+.OrderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3em;
+}
+.OrderButton .btnExplore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 3em;
+  border-style: solid;
+  border: #9356DC;
+  border-radius: 40px;
+  color: white;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  padding-left: 4.5em;
+  padding-right: 4.5em;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #424141;
+  color: white;
+  width: 100%;
+  padding: 1em;
+  gap: 0.5em;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-weight: 20;
+  margin: 0.2em;
+  padding-left: 0.5em;
+}
+footer li {
+  list-style: none;
+  padding-left: 1em;
+  gap: 5em;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -54,6 +153,13 @@ header .btnExplore {
   font-family: "Roboto", sans-serif;
 }
 
+.Options__Item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 /* BODY */
 .HowItWorks {
   display: flex;
@@ -64,13 +170,22 @@ header .btnExplore {
 .HowItWorks h3 {
   padding-right: 10em;
 }
-.HowItWorks .Options .num .select {
-  flex-direction: row;
+.HowItWorks .Options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 .HowItWorks .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   border-style: solid;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: #9356DC;
   background-color: #9356DC;
@@ -78,15 +193,31 @@ header .btnExplore {
   text-align: center;
   position: relative;
   z-index: 2;
-  left: -20%;
+  left: 0.75em;
+  font-size: 14px;
 }
 .HowItWorks .select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
   border-style: solid;
   border-radius: 20px;
   border: #100221;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-  height: 2em;
+  height: 3.5em;
+  flex-direction: row;
+  min-width: 19em;
   width: 100%;
+  padding: 2em;
+}
+.HowItWorks .select:active, .HowItWorks .select:hover {
+  background-color: #e4d5f6;
+}
+.HowItWorks .select:active i, .HowItWorks .select:hover i {
+  color: #9356DC;
 }
 
 .Restaurants {

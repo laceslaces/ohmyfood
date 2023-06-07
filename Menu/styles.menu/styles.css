@@ -30,6 +30,8 @@ header .logo h1 {
   align-items: center;
   flex-direction: column;
   gap: 2em;
+  justify-content: left;
+  align-items: flex-start;
 }
 .Dishes .click {
   display: flex;
@@ -43,6 +45,8 @@ header .logo h1 {
   height: 4em;
   width: 100%;
   font-weight: 600;
+  justify-content: left;
+  align-items: flex-start;
 }
 .Dishes .click p {
   font-weight: 100;
@@ -53,6 +57,7 @@ header .logo h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 3em;
 }
 .OrderButton .btnExplore {
   display: flex;
