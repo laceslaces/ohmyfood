@@ -33,6 +33,10 @@ header .logo h1 {
   justify-content: left;
   align-items: flex-start;
 }
+.Dishes h2 {
+  font-family: "Shrikhand";
+  font-weight: 200;
+}
 .Dishes .click {
   display: flex;
   justify-content: center;
@@ -70,7 +74,7 @@ header .logo h1 {
   border-radius: 40px;
   color: white;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
-  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
   padding-left: 4.5em;
   padding-right: 4.5em;
 }
@@ -145,7 +149,7 @@ header .btnExplore {
   border-radius: 40px;
   color: white;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
-  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -214,7 +218,7 @@ header .btnExplore {
   padding: 2em;
 }
 .HowItWorks .select:active, .HowItWorks .select:hover {
-  background-color: #e4d5f6;
+  background-color: #f2eafb;
 }
 .HowItWorks .select:active i, .HowItWorks .select:hover i {
   color: #9356DC;

@@ -3,7 +3,7 @@ $primaryColor: #9356DC;
 $secondaryColor: #FF79DA;
 $tertiaryColor: #99E2D0;
 $midBorderRadius: 40px;
-$shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.3);
+$shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
 $logoFont: 'Shrikhand';
 $card-width: 300px;
 $card-height: 200px;
@@ -130,7 +130,7 @@ header {
 
         &:active,
         &:hover {
-            background-color: lighten($primaryColor, 30%);
+            background-color: lighten($primaryColor, 35%);
             i {
                 color: $primaryColor;
             }
