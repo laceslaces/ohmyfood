@@ -54,46 +54,57 @@ header {
         font-family: $logoFont !important;
         }
     }
+    img {
+        height: 13em;
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
-.Dishes {
-    @include flexCenterCol;
-    gap: 2em;
-    justify-content: left;
-    align-items: flex-start;
-    h2 {
-        font-family: $logoFont;
-        font-weight: 200;
-    }
-        .click {
-            @include flexCenterRow;
-            border-style: solid;
-            border-radius: 20px;
-            border: #100221;
-            box-shadow: $shadow;
-            height: 4.5em;
-            width: 100%;
-            font-weight: 600;
-            justify-content: left;
-            align-items: flex-start;
-            .click--item {
-                width: 100%;
-                h3{
-                    margin: 0.5em;
-                    
-                }
-                p {
-                    margin-left: 0.5em;
-                    margin-top: 0em;
-                    font-weight: 100;
-                }
+
+.MainSec { 
+    position: relative;
+    z-index: 2;
+    bottom: 0.75em;
+    border-radius: 50px;
+    background-color: white;
+  .Dishes {
+        @include flexCenterCol;
+        gap: 2em;
+        justify-content: left;
+        align-items: flex-start;
+            h2 {
+                font-family: $logoFont;
+                font-weight: 200;
             }
-            .click--price {
-                padding: 1.5em;
+            .click {
+                @include flexCenterRow;
+                border-style: solid;
+                border-radius: 20px;
+                border: #100221;
+                box-shadow: $shadow;
+                height: 4.5em;
+                width: 100%;
+                font-weight: 600;
+                justify-content: left;
+                align-items: flex-start;
+                .click--item {
+                    width: 100%;
+                    h3{
+                        margin: 0.5em;
+                        
+                    }
+                    p {
+                        margin-left: 0.5em;
+                        margin-top: 0em;
+                        font-weight: 100;
+                    }
+                }
+                .click--price {
+                    padding: 1.5em;
+                }
             }
         }
-
-
 }
 
 

@@ -23,8 +23,21 @@ header .logo {
 header .logo h1 {
   font-family: "Shrikhand" !important;
 }
+header img {
+  height: 13em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
 
-.Dishes {
+.MainSec {
+  position: relative;
+  z-index: 2;
+  bottom: 0.75em;
+  border-radius: 50px;
+  background-color: white;
+}
+.MainSec .Dishes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,11 +46,11 @@ header .logo h1 {
   justify-content: left;
   align-items: flex-start;
 }
-.Dishes h2 {
+.MainSec .Dishes h2 {
   font-family: "Shrikhand";
   font-weight: 200;
 }
-.Dishes .click {
+.MainSec .Dishes .click {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,18 +65,18 @@ header .logo h1 {
   justify-content: left;
   align-items: flex-start;
 }
-.Dishes .click .click--item {
+.MainSec .Dishes .click .click--item {
   width: 100%;
 }
-.Dishes .click .click--item h3 {
+.MainSec .Dishes .click .click--item h3 {
   margin: 0.5em;
 }
-.Dishes .click .click--item p {
+.MainSec .Dishes .click .click--item p {
   margin-left: 0.5em;
   margin-top: 0em;
   font-weight: 100;
 }
-.Dishes .click .click--price {
+.MainSec .Dishes .click .click--price {
   padding: 1.5em;
 }
 
@@ -110,4 +123,4 @@ footer li {
   list-style: none;
   padding-left: 1em;
   gap: 5em;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=bastille.css.map */
