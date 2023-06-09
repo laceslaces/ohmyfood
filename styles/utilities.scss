@@ -1,0 +1,44 @@
+$primaryColor: #9356DC;
+$secondaryColor: #FF79DA;
+$tertiaryColor: #99E2D0;
+$midBorderRadius: 40px;
+$shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
+$logoFont: 'Shrikhand';
+$card-width: 300px;
+$card-height: 200px;
+
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexCenterCol {
+    @include flexCenter(column);
+}
+
+@mixin flexCenterRow {
+    @include flexCenter(row);
+}
+
+
+h4,
+p {
+    margin: 0px !important;
+    margin-block-start: 0em;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@mixin button {
+    height: 3em;
+    border-style: solid;
+    border: $primaryColor;
+    border-radius: $midBorderRadius;
+    color: white;
+    background: linear-gradient(170deg, $secondaryColor, $primaryColor);
+    box-shadow: $shadow;
+}
