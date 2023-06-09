@@ -1,0 +1,191 @@
+@import './utilities.scss';
+
+/* HEADER */
+
+.Card {
+
+    @include flexCenterCol;
+    width: $card-width;
+    height: $card-height;
+    overflow: hidden;
+    box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+header {
+    @include flexCenterCol;
+    background-color: #f1f1f1e7;
+
+    .logo {
+        @include flexCenterCol;
+        background-color: white;
+        width: 100%;
+        font-size: large;
+        height: 3em;
+
+        h1 {
+            font-family: $logoFont !important;
+        }
+    }
+
+    .Location {
+        @include flexCenter(row);
+        background-color: #e6e6e6e7;
+        width: 100%;
+        height: 3em;
+        margin: 0em;
+
+        .fa-location-dot {
+            padding-right: 1em;
+        }
+    }
+
+    .ExploreRestaurants {
+        @include flexCenter(column);
+        padding-bottom: 2em;
+    }
+
+    .btnExplore {
+        @include button;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Options {
+    &__Item {
+        @include flexCenterRow;
+    }
+}
+
+
+/* BODY */
+
+.HowItWorks {
+    @include flexCenterCol;
+
+    h3 {
+        padding-right: 10em;
+    }
+
+    .Options {
+        @include flexCenterCol;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .num {
+        @include flexCenterRow;
+        border-style: solid;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: $primaryColor;
+        background-color: $primaryColor;
+        color: white;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        left: 0.75em;
+        font-size: 14px;
+
+    }
+
+    .select {
+        @include flexCenterRow;
+        justify-content: flex-start;
+        gap: 20px;
+        border-style: solid;
+        border-radius: 20px;
+        border: #100221;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+        height: 3.5em;
+        flex-direction: row;
+        min-width: 19em;
+        width: 100%;
+        padding: 2em;
+
+        &:active,
+        &:hover {
+            background-color: lighten($primaryColor, 35%);
+
+            i {
+                color: $primaryColor;
+            }
+        }
+
+
+    }
+}
+
+
+.Restaurants {
+    @include flexCenterCol;
+
+    h3 {
+        padding-right: 10em;
+    }
+
+    .FoodCards {
+        @include flexCenterCol;
+
+        margin: 0.5em;
+
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 65%;
+    }
+
+    .restName {
+        width: 100%;
+        font-weight: bolder;
+        padding: 0.5em;
+
+        p {
+            font-weight: 100;
+            margin: 0em;
+            width: 100%;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #424141;
+    color: white;
+    width: 100%;
+    padding: 1em;
+    gap: 0.5em;
+
+    h4 {
+        font-family: $logoFont;
+        font-weight: 20;
+        margin: 0.2em;
+        padding-left: 0.5em;
+    }
+
+    li {
+        list-style: none;
+        padding-left: 1em;
+        gap: 5em;
+    }
+}
+
+
+/*# sourceMappingURL=styles.css.map */

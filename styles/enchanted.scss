@@ -1,0 +1,125 @@
+@import './utilities.scss';
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    @include flexCenterCol;
+    background-color: #f1f1f1e7;
+
+    .logo {
+        @include flexCenterCol;
+        background-color: white;
+        width: 100%;
+        font-size: large;
+        height: 3em;
+
+        h1 {
+            font-family: $logoFont !important;
+        }
+    }
+
+    img {
+        height: 13em;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.MainSec {
+    position: relative;
+    z-index: 2;
+    bottom: 0.75em;
+    border-radius: 50px;
+    background-color: white;
+
+    .Dishes {
+        @include flexCenterCol;
+        gap: 2em;
+        justify-content: left;
+        align-items: flex-start;
+
+        h2 {
+            font-family: $logoFont;
+            font-weight: 200;
+            padding-left: 1em;
+
+            i {
+                padding-left: 5em;
+            }
+        }
+
+        .click {
+            @include flexCenterRow;
+            border-style: solid;
+            border-radius: 20px;
+            border: #100221;
+            box-shadow: $shadow;
+            height: 4.5em;
+            width: 100%;
+            font-weight: 600;
+            justify-content: left;
+            align-items: flex-start;
+
+            .click--item {
+                width: 100%;
+
+                h3 {
+                    margin: 0.5em;
+
+                }
+
+                p {
+                    margin-left: 0.5em;
+                    margin-top: 0em;
+                    font-weight: 100;
+                }
+            }
+
+            .click--price {
+                padding: 1.5em;
+            }
+        }
+    }
+}
+
+
+.OrderButton {
+    @include flexCenterCol;
+    padding: 3em;
+
+    .btnExplore {
+        @include flexCenterCol;
+        @include button;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #424141;
+    color: white;
+    width: 100%;
+    padding: 1em;
+    gap: 0.5em;
+
+    h4 {
+        font-family: $logoFont;
+        font-weight: 20;
+        margin: 0.2em;
+        padding-left: 0.5em;
+    }
+
+    li {
+        list-style: none;
+        padding-left: 1em;
+        gap: 5em;
+    }
+}
