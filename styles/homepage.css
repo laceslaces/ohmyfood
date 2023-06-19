@@ -151,6 +151,9 @@ header .btnExplore {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .Restaurants h3 {
   padding-right: 10em;
@@ -172,14 +175,18 @@ header .btnExplore {
   width: 100%;
   font-weight: bolder;
   padding: 0.5em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 .Restaurants .restName p {
   font-weight: 100;
   margin: 0em;
   width: 100%;
+}
+.Restaurants .fa-regular {
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  background-color: linear-gradient(170deg, #FF79DA, #9356DC);
 }
 
 /* FOOTER */
@@ -198,10 +205,9 @@ footer h4 {
   margin: 0.2em;
   padding-left: 0.5em;
 }
-footer li {
+footer .NavList {
   list-style: none;
   padding-left: 1em;
-  gap: 5em;
 }
 
 /*# sourceMappingURL=homepage.css.map */

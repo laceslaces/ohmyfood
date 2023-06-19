@@ -153,12 +153,22 @@ header {
             width: 100%;
         }
 
+        }
+
+        .fa-regular {
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(170deg, $secondaryColor, $primaryColor);
+            background-color: linear-gradient(170deg, $secondaryColor, $primaryColor);
+            
+        }
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
-}
 
+     
+    }
 
 
 
@@ -180,10 +190,10 @@ footer {
         padding-left: 0.5em;
     }
 
-    li {
+    .NavList {
         list-style: none;
         padding-left: 1em;
-        gap: 5em;
+        
     }
 }
 
