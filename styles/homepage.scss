@@ -142,7 +142,7 @@ header {
         height: 65%;
     }
 
-    .restName {
+    .RestName {
         width: 100%;
         font-weight: bolder;
         padding: 0.5em;
@@ -193,7 +193,10 @@ footer {
     .NavList {
         list-style: none;
         padding-left: 1em;
-        
+    }
+
+    .NavItem {
+        padding: 0.2em;
     }
 }
 
