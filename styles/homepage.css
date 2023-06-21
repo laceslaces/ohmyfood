@@ -11,6 +11,39 @@ p {
           margin-inline-end: 0px;
 }
 
+.heartGradientFull {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+}
+
+.HeartWrapper {
+  display: grid;
+}
+.HeartWrapper .fa-regular,
+.HeartWrapper .fa-solid {
+  grid-column: 1;
+  grid-row: 1;
+}
+.HeartWrapper .fa-solid {
+  opacity: 0%;
+}
+.HeartWrapper .fa-regular {
+  color: black;
+}
+.HeartWrapper:hover .fa-solid, .HeartWrapper:active .fa-solid {
+  opacity: 100%;
+}
+.HeartWrapper:hover .fa-regular, .HeartWrapper:active .fa-regular {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+}
+
 /* HEADER */
 .Card {
   display: flex;
@@ -175,18 +208,20 @@ header .btnExplore {
   width: 100%;
   font-weight: bolder;
   padding: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .Restaurants .RestName p {
   font-weight: 100;
   margin: 0em;
   width: 100%;
 }
-.Restaurants .fa-regular {
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
-  background-color: linear-gradient(170deg, #FF79DA, #9356DC);
+.Restaurants .RestName h4 {
+  display: inline-flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 50%;
 }
 
 /* FOOTER */
