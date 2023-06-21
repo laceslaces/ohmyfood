@@ -42,3 +42,45 @@ p {
     background: linear-gradient(170deg, $secondaryColor, $primaryColor);
     box-shadow: $shadow;
 }
+
+@mixin textGradient {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(170deg, $secondaryColor, $primaryColor);
+}
+
+.heartGradientFull {
+    @include textGradient();
+}
+
+.HeartWrapper {
+    display: grid;
+
+    .fa-regular,
+    .fa-solid {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .fa-solid {
+        opacity: 0%;
+    }
+
+    .fa-regular {
+        color: black
+    }
+
+    &:hover,
+    &:active {
+
+        .fa-solid {
+            opacity: 100%;
+        }
+
+        .fa-regular {
+            @include textGradient();
+        }
+    }
+}
