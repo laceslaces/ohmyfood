@@ -33,6 +33,11 @@ p {
     margin-inline-end: 0px;
 }
 
+header, 
+body {
+    margin: 3px;
+}
+
 @mixin button {
     height: 3em;
     border-style: solid;

@@ -11,6 +11,11 @@ p {
           margin-inline-end: 0px;
 }
 
+header,
+body {
+  margin: 10px;
+}
+
 .heartGradientFull {
   color: transparent;
   background-clip: text;
