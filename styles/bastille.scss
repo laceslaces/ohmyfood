@@ -42,11 +42,16 @@ header {
         gap: 2em;
         justify-content: left;
         align-items: flex-start;
+        padding-bottom: 3em;
 
-        h2 {
+        h1 {
             font-family: $logoFont;
             font-weight: 200;
         }
+        h2 {
+            @include GreenUnderline;
+        }
+    }
 
         .click {
             @include flexCenterRow;
@@ -57,8 +62,6 @@ header {
             height: 4.5em;
             width: 100%;
             font-weight: 600;
-            justify-content: left;
-            align-items: flex-start;
 
             .click--item {
                 width: 100%;
@@ -70,7 +73,6 @@ header {
 
                 p {
                     margin-left: 0.5em;
-                    margin-top: 0em;
                     font-weight: 100;
                 }
             }
@@ -81,9 +83,10 @@ header {
         }
     }
     
-    .box {
-        background: #60d4bf;
-        width: 30%;
+    .TickBox {
+        @include flexCenterRow;
+        background: #5ac0a4;
+        width: 20%;
         height: 100%;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -96,16 +99,16 @@ header {
         }
     }
     i {
-        width: 50%;
-        height: 30px;
+        width: 35%;
+        height: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: white;
-        color: #60d4bf;
-        border-radius: 20px;
+        color: #5ac0a4;
+        border-radius: 50px;
     }
-}
+
 
 
 .OrderButton {

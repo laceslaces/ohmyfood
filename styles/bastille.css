@@ -13,7 +13,7 @@ p {
 
 header,
 body {
-  margin: 2px;
+  margin: 3px;
 }
 
 .heartGradientFull {
@@ -47,6 +47,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #5ac0a4;
 }
 
 * {
@@ -96,12 +106,19 @@ header img {
   gap: 2em;
   justify-content: left;
   align-items: flex-start;
+  padding-bottom: 3em;
 }
-.MainSec .Dishes h2 {
+.MainSec .Dishes h1 {
   font-family: "Shrikhand";
   font-weight: 200;
 }
-.MainSec .Dishes .click {
+.MainSec .Dishes h2 {
+  position: relative;
+  font-size: medium;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+}
+.MainSec .click {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,26 +130,28 @@ header img {
   height: 4.5em;
   width: 100%;
   font-weight: 600;
-  justify-content: left;
-  align-items: flex-start;
 }
-.MainSec .Dishes .click .click--item {
+.MainSec .click .click--item {
   width: 100%;
 }
-.MainSec .Dishes .click .click--item h3 {
+.MainSec .click .click--item h3 {
   margin: 0.5em;
 }
-.MainSec .Dishes .click .click--item p {
+.MainSec .click .click--item p {
   margin-left: 0.5em;
-  margin-top: 0em;
   font-weight: 100;
 }
-.MainSec .Dishes .click .click--price {
+.MainSec .click .click--price {
   padding: 1.5em;
 }
-.MainSec .box {
-  background: #60d4bf;
-  width: 30%;
+
+.TickBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #5ac0a4;
+  width: 20%;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -140,18 +159,19 @@ header img {
   transition: transform 1000ms;
   transform: translateX(100%);
 }
-.MainSec .box:hover, .MainSec .box:active {
+.TickBox:hover, .TickBox:active {
   transform: translateX(0%);
 }
-.MainSec i {
-  width: 50%;
-  height: 30px;
+
+i {
+  width: 35%;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  color: #60d4bf;
-  border-radius: 20px;
+  color: #5ac0a4;
+  border-radius: 50px;
 }
 
 .OrderButton {
