@@ -89,3 +89,20 @@ body {
         }
     }
 }
+
+@mixin GreenUnderline {
+    position: relative;
+    font-size: medium;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+}
+  
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #5ac0a4;
+  }
