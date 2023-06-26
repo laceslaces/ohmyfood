@@ -13,7 +13,7 @@ p {
 
 header,
 body {
-  margin: 10px;
+  margin: 3px;
 }
 
 .heartGradientFull {
@@ -96,14 +96,15 @@ header img {
   gap: 2em;
   justify-content: left;
   align-items: flex-start;
+  padding-bottom: 3em;
 }
-.MainSec .Dishes h2 {
+.MainSec .Dishes h1 {
   font-family: "Shrikhand";
   font-weight: 200;
-  padding-left: 1em;
 }
-.MainSec .Dishes h2 i {
-  padding-left: 5em;
+.MainSec .Dishes h2 {
+  font-size: medium;
+  font-weight: 400;
 }
 .MainSec .Dishes .click {
   display: flex;

@@ -42,15 +42,18 @@ header {
         gap: 2em;
         justify-content: left;
         align-items: flex-start;
+        padding-bottom: 3em;
 
-        h2 {
+        h1 {
             font-family: $logoFont;
             font-weight: 200;
-
-            i {
-                padding-left: 0.5em;
-            }
         }
+
+        h2 {
+            font-size: medium;
+            font-weight: 400;
+        }
+
 
         .click {
             @include flexCenterRow;
