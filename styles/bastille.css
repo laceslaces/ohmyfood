@@ -11,6 +11,11 @@ p {
           margin-inline-end: 0px;
 }
 
+header,
+body {
+  margin: 2px;
+}
+
 .heartGradientFull {
   color: transparent;
   background-clip: text;
@@ -124,6 +129,29 @@ header img {
 }
 .MainSec .Dishes .click .click--price {
   padding: 1.5em;
+}
+.MainSec .box {
+  background: #60d4bf;
+  width: 30%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  transition: transform 1000ms;
+  transform: translateX(100%);
+}
+.MainSec .box:hover, .MainSec .box:active {
+  transform: translateX(0%);
+}
+.MainSec i {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #60d4bf;
+  border-radius: 20px;
 }
 
 .OrderButton {

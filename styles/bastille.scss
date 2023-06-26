@@ -80,6 +80,31 @@ header {
             }
         }
     }
+    
+    .box {
+        background: #60d4bf;
+        width: 30%;
+        height: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: relative;
+        transition: transform 1000ms;
+        transform: translateX(100%);
+        &:hover,
+        &:active {
+            transform: translateX(-0%); 
+        }
+    }
+    i {
+        width: 50%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: #60d4bf;
+        border-radius: 20px;
+    }
 }
 
 
