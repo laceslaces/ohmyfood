@@ -33,9 +33,9 @@ p {
     margin-inline-end: 0px;
 }
 
-header, 
+header,
 body {
-    margin: 3px;
+    margin: 0px;
 }
 
 @mixin button {
@@ -96,13 +96,13 @@ body {
     font-weight: 400;
     padding-bottom: 0.5em;
 }
-  
-  h2::after {
+
+h2::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50%;
-    height: 2px;
+    width: 60%;
+    height: 3px;
     background-color: #5ac0a4;
-  }
+}
