@@ -6,9 +6,16 @@
 }
 
 
+.heroimage {
+    position: absolute;
+    height: 50em;
+    z-index: -1;
+}
+
+
 header {
     @include flexCenterCol;
-    background-color: #f1f1f1e7;
+    background-color: #dad8d8e7;
 
     .logo {
         @include flexCenterCol;
@@ -29,13 +36,18 @@ header {
     }
 }
 
+// HOW TO REFERENCE LINKS TO PAGES INSIDE OWN HTML WEBSITE: "/fullpalette.html"
 
 .MainSec {
     position: relative;
     z-index: 2;
     bottom: 0.75em;
     border-radius: 50px;
-    background-color: white;
+    margin-top: 40vh;
+    padding: 30px;
+    background-color: #dad8d8;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 
     .Dishes {
         @include flexCenterCol;
@@ -48,66 +60,79 @@ header {
             font-family: $logoFont;
             font-weight: 200;
         }
+
         h2 {
             @include GreenUnderline;
         }
     }
 
-        .click {
-            @include flexCenterRow;
-            border-style: solid;
-            border-radius: 20px;
-            border: #100221;
-            box-shadow: $shadow;
-            height: 4.5em;
-            width: 100%;
-            font-weight: 600;
-
-            .click--item {
-                width: 100%;
-
-                h3 {
-                    margin: 0.5em;
-
-                }
-
-                p {
-                    margin-left: 0.5em;
-                    font-weight: 100;
-                }
-            }
-
-            .click--price {
-                padding: 1.5em;
-            }
-        }
-    }
-    
-    .TickBox {
+    .click {
         @include flexCenterRow;
-        background: #5ac0a4;
-        width: 20%;
-        height: 100%;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        position: relative;
-        transition: transform 1000ms;
-        transform: translateX(100%);
-        &:hover,
-        &:active {
-            transform: translateX(-0%); 
+        border-style: solid;
+        border-radius: 20px;
+        border: #100221;
+        box-shadow: $shadow;
+        height: 4.5em;
+        width: 100%;
+        font-weight: 600;
+        overflow: hidden;
+        background-color: white;
+
+        &--item {
+            width: 100%;
+            padding-left: 2%;
+            padding-bottom: 3%;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin: 0em;
+
+            }
+
+            p {
+                margin-left: 0em;
+                font-weight: 100;
+            }
+        }
+
+        .click--price {
+            padding: 1.5em;
+            transform: translateX(102%);
+            transition: transform 1000ms;
+        }
+
+        &:hover .TickBox,
+        &:active .TickBox,
+        &:hover .click--price,
+        &:active .click--price {
+            transform: translateX(0);
         }
     }
-    i {
-        width: 35%;
-        height: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        color: #5ac0a4;
-        border-radius: 50px;
-    }
+}
+
+.TickBox {
+    @include flexCenterRow;
+    background: #5ac0a4;
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    transition: transform 1000ms;
+    transform: translateX(102%);
+}
+
+.tick-green {
+    width: 30%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5ac0a4;
+    background-color: white;
+    border-radius: 50px;
+}
 
 
 
@@ -146,6 +171,7 @@ footer {
         list-style: none;
         padding-left: 1em;
     }
+
     .NavItem {
         padding: 0.2em;
     }
