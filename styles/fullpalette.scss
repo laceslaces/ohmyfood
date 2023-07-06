@@ -89,6 +89,10 @@ header {
     }
 }
 
+.TickBox {
+    @include TickBox;
+}
+
 
 .OrderButton {
     @include flexCenterCol;

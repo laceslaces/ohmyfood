@@ -49,6 +49,22 @@ body {
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
 }
 
+@keyframes fillHeart {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+.HeartWrapper {
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+.HeartWrapper:hover, .HeartWrapper:active {
+  animation: fillHeart 2s ease-in-out forwards;
+}
+
 h2::after {
   content: "";
   position: absolute;
@@ -144,6 +160,31 @@ header img {
 }
 .MainSec .Dishes .click .click--price {
   padding: 1.5em;
+}
+
+.TickBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(90, 192, 164, 0.6);
+  width: 15%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  transition: transform 1000ms;
+  transform: translateX(102%);
+}
+.TickBox .tick-green {
+  width: 30%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5ac0a4;
+  background-color: white;
+  border-radius: 50px;
 }
 
 .OrderButton {
