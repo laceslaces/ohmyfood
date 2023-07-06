@@ -49,6 +49,22 @@ body {
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
 }
 
+@keyframes FillHeart {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+.HeartWrapper {
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+.HeartWrapper:hover, .HeartWrapper:active {
+  animation: fillHeart 2s ease-in-out forwards;
+}
+
 h2::after {
   content: "";
   position: absolute;
