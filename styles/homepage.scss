@@ -2,19 +2,26 @@
 
 /* HEADER */
 
-.Card {
+.CardLink {
+    text-decoration: none;
+    .Card {
+        @include flexCenterCol;
+        width: $card-width;
+        height: $card-height;
+        overflow: hidden;
+        box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+    &:active,
+    &:hover {
+        text-decoration: none;
+    }
 
-    @include flexCenterCol;
-    width: $card-width;
-    height: $card-height;
-    overflow: hidden;
-    box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
 }
 
 header {
     @include flexCenterCol;
-    background-color: #f1f1f1e7;
+    background-color: rgb(244, 241, 241);
 
     .logo {
         @include flexCenterCol;
