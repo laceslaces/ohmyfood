@@ -58,6 +58,14 @@ body {
 
 .heartGradientFull {
     @include textGradient();
+
+    animation-name: FillHeart;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: forward;
+    animation-play-state: running;
 }
 
 .HeartWrapper {
@@ -91,25 +99,24 @@ body {
 }
 
 @keyframes FillHeart {
-    0% { background-size: 0% 100%; }  // Start with 0% width and 100% height
-    100% { background-size: 100% 100%; }  // End with 100% width and 100% height
-  }
+        from {
+            height: 0%;
+        }
 
-  .HeartWrapper {
-    background-size: 0% 100%;  // Start with 0% width and 100% height
-    background-repeat: no-repeat;  // Prevent the icon from repeating
-    &:hover,
-    &:active {
-    animation: fillHeart 2s ease-in-out forwards;
+        to {
+            height: 40%;
+        }
     }
-  }
+
+   
+   
 
 
  @mixin TickBox {
     @include flexCenterRow;
     background-color: rgb(90, 192, 164, 0.6);
-    width: 15%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     position: relative;
