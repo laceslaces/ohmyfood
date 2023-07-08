@@ -12,7 +12,7 @@ header {
     background-color: #f1f1f1e7;
 
     .logo {
-        @include flexCenterCol;
+        @include flexCenterRow;
         background-color: white;
         width: 100%;
         font-size: large;
@@ -20,6 +20,12 @@ header {
 
         h1 {
             font-family: $logoFont !important;
+            width: 100%;
+        }
+        .leftarrow {
+            width: 45%;
+            padding-left: 2em;
+            
         }
     }
 
