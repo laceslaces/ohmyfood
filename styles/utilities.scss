@@ -56,15 +56,15 @@ body {
     background-image: linear-gradient(170deg, $secondaryColor, $primaryColor);
 }
 
-.heartGradientFull {
+.heartGradientFull:active {
     @include textGradient();
 
     animation-name: FillHeart;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
-    animation-direction: forward;
+    animation-fill-mode: forwards;
     animation-play-state: running;
 }
 
@@ -85,34 +85,68 @@ body {
         color: black
     }
 
-    &:hover,
-    &:active {
+}
 
-        .fa-solid {
-            opacity: 100%;
-        }
+.spinner {
+    font-size: 75px;
+    position: fixed;
+    left: 45%;
+    animation-name: rotate, appear;
+    animation-duration: 1s, 3.5s;
+    animation-direction: normal, reverse;
+    animation-iteration-count: infinite, 1;
+    animation-fill-mode: none, forwards;
 
-        .fa-regular {
-            @include textGradient();
-        }
+}
+
+header,
+footer,
+.HowItWorks,
+.Restaurants {
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
     }
 }
 
 @keyframes FillHeart {
-        from {
-            height: 0%;
-        }
-
-        to {
-            height: 40%;
-        }
+    from {
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
     }
 
-   
-   
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
 
 
- @mixin TickBox {
+
+
+
+@mixin TickBox {
     @include flexCenterRow;
     background-color: rgb(90, 192, 164, 0.6);
     width: 100px;
