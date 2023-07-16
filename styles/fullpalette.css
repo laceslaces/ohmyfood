@@ -16,7 +16,7 @@ body {
   margin: 0px;
 }
 
-.heartGradientFull {
+.heartGradientFull:active {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -24,10 +24,10 @@ body {
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
   animation-name: FillHeart;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
-  animation-direction: forward;
+  animation-fill-mode: forwards;
   animation-play-state: running;
 }
 
@@ -45,23 +45,53 @@ body {
 .HeartWrapper .fa-regular {
   color: black;
 }
-.HeartWrapper:hover .fa-solid, .HeartWrapper:active .fa-solid {
-  opacity: 100%;
-}
-.HeartWrapper:hover .fa-regular, .HeartWrapper:active .fa-regular {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+
+.spinner {
+  font-size: 75px;
+  position: fixed;
+  left: 45%;
+  animation-name: rotate, appear;
+  animation-duration: 1s, 3.5s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: none, forwards;
 }
 
-@keyframes FillHeart {
+header,
+footer,
+.HowItWorks,
+.Restaurants {
+  animation-name: appear;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
   from {
-    height: 0%;
+    opacity: 0;
   }
   to {
-    height: 40%;
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes FillHeart {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 h2::after {
@@ -77,6 +107,15 @@ h2::after {
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+.heroimage {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -114,9 +153,12 @@ header img {
 .MainSec {
   position: relative;
   z-index: 2;
-  bottom: 0.75em;
   border-radius: 50px;
-  background-color: white;
+  margin-top: 40vh;
+  padding: 30px;
+  background-color: rgb(244, 241, 241);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .MainSec .Dishes {
   display: flex;
@@ -133,10 +175,12 @@ header img {
   font-weight: 200;
 }
 .MainSec .Dishes h2 {
+  position: relative;
   font-size: medium;
   font-weight: 400;
+  padding-bottom: 0.5em;
 }
-.MainSec .Dishes .click {
+.MainSec .click {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,22 +192,32 @@ header img {
   height: 4.5em;
   width: 100%;
   font-weight: 600;
-  justify-content: left;
-  align-items: flex-start;
+  overflow: hidden;
+  background-color: white;
 }
-.MainSec .Dishes .click .click--item {
+.MainSec .click--item {
   width: 100%;
+  padding-left: 2%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
 }
-.MainSec .Dishes .click .click--item h3 {
-  margin: 0.5em;
+.MainSec .click--item h3 {
+  margin: 0em;
+  padding-top: 1em;
 }
-.MainSec .Dishes .click .click--item p {
-  margin-left: 0.5em;
-  margin-top: 0em;
+.MainSec .click--item p {
+  margin-left: 0em;
   font-weight: 100;
+  padding-top: 0.5em;
 }
-.MainSec .Dishes .click .click--price {
+.MainSec .click .click--price {
   padding: 1.5em;
+  transform: translateX(102%);
+  transition: transform 1000ms;
+}
+.MainSec .click:hover .TickBox, .MainSec .click:active .TickBox, .MainSec .click:hover .click--price, .MainSec .click:active .click--price {
+  transform: translateX(0);
 }
 
 .TickBox {
@@ -197,6 +251,7 @@ header img {
   align-items: center;
   flex-direction: column;
   padding: 3em;
+  background-color: rgb(244, 241, 241);
 }
 .OrderButton .btnExplore {
   display: flex;
