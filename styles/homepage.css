@@ -16,7 +16,7 @@ body {
   margin: 0px;
 }
 
-.heartGradientFull {
+.heartGradientFull:active {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -24,10 +24,10 @@ body {
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
   animation-name: FillHeart;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
-  animation-direction: forward;
+  animation-fill-mode: forwards;
   animation-play-state: running;
 }
 
@@ -45,23 +45,53 @@ body {
 .HeartWrapper .fa-regular {
   color: black;
 }
-.HeartWrapper:hover .fa-solid, .HeartWrapper:active .fa-solid {
-  opacity: 100%;
-}
-.HeartWrapper:hover .fa-regular, .HeartWrapper:active .fa-regular {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+
+.spinner {
+  font-size: 75px;
+  position: fixed;
+  left: 45%;
+  animation-name: rotate, appear;
+  animation-duration: 1s, 3.5s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: none, forwards;
 }
 
-@keyframes FillHeart {
+header,
+footer,
+.HowItWorks,
+.Restaurants {
+  animation-name: appear;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
   from {
-    height: 0%;
+    opacity: 0;
   }
   to {
-    height: 40%;
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes FillHeart {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 h2::after {
