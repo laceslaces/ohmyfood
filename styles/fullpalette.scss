@@ -56,6 +56,21 @@ header {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 
+    .MenuHead {
+        @include flexCenterRow;
+        justify-content: space-around;
+        
+        h1 {
+            font-family: $logoFont;
+            font-weight: 200;
+            width: 100%;
+        }
+        .HeartWrapper {
+            width: 30%;
+            font-size: 30px;
+        }
+    }
+
     .Dishes {
         @include flexCenterCol;
         gap: 2em;

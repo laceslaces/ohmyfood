@@ -6,6 +6,7 @@
 }
 
 
+
 .heroimage {
     position: absolute;
     z-index: -1;
@@ -47,8 +48,6 @@ header {
     }
 }
 
-// HOW TO REFERENCE LINKS TO PAGES INSIDE OWN HTML WEBSITE: "/fullpalette.html"
-
 .MainSec {
     position: relative;
     z-index: 2;
@@ -58,6 +57,21 @@ header {
     background-color: rgb(244, 241, 241);
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+
+    .MenuHead {
+        @include flexCenterRow;
+        justify-content: space-around;
+        
+        h1 {
+            font-family: $logoFont;
+            font-weight: 200;
+            width: 100%;
+        }
+        .HeartWrapper {
+            width: 30%;
+            font-size: 30px;
+        }
+    }
     
     .Dishes {
         @include flexCenterCol;
@@ -65,11 +79,6 @@ header {
         justify-content: left;
         align-items: flex-start;
         padding-bottom: 3em;
-
-        h1 {
-            font-family: $logoFont;
-            font-weight: 200;
-        }
 
         h2 {
             @include GreenUnderline;
@@ -167,4 +176,18 @@ footer {
     .NavItem {
         padding: 0.2em;
     }
+}
+
+
+
+@media only screen and (min-device-width: 767px) {
+
+    header, 
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
 }

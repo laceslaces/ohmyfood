@@ -46,12 +46,23 @@ body {
   color: black;
 }
 
+@keyframes FillHeart {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 .spinner {
   font-size: 75px;
   position: fixed;
   left: 45%;
   animation-name: rotate, appear;
-  animation-duration: 1s, 3.5s;
+  animation-duration: 1s, 3s;
   animation-direction: normal, reverse;
   animation-iteration-count: infinite, 1;
   animation-fill-mode: none, forwards;
@@ -83,17 +94,46 @@ footer,
     transform: rotate(180deg);
   }
 }
-@keyframes FillHeart {
-  from {
-    transform: scaleY(0);
-    transform-origin: bottom;
-    opacity: 0;
-  }
-  to {
-    transform: scaleY(1);
-    opacity: 1;
-  }
+.click {
+  animation-name: appear;
 }
+.click:nth-child(1) {
+  animation-duration: 0s;
+  transition-delay: 0.5s;
+}
+.click:nth-child(2) {
+  animation-duration: 1s;
+  transition-delay: 1s;
+}
+.click:nth-child(3) {
+  animation-duration: 2s;
+  transition-delay: 2s;
+}
+.click:nth-child(4) {
+  animation-duration: 2.5s;
+  transition-delay: 2.5s;
+}
+.click:nth-child(5) {
+  animation-duration: 3s;
+  transition-delay: 3s;
+}
+.click:nth-child(6) {
+  animation-duration: 3.5s;
+  transition-delay: 3.5s;
+}
+.click:nth-child(7) {
+  animation-duration: 4s;
+  transition-delay: 4s;
+}
+.click:nth-child(8) {
+  animation-duration: 4.5s;
+  transition-delay: 4.5s;
+}
+.click:nth-child(9) {
+  animation-duration: 5s;
+  transition-delay: 5s;
+}
+
 h2::after {
   content: "";
   position: absolute;
@@ -159,6 +199,22 @@ header img {
   background-color: rgb(244, 241, 241);
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+.MainSec .MenuHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.MainSec .MenuHead h1 {
+  font-family: "Shrikhand";
+  font-weight: 200;
+  width: 100%;
+}
+.MainSec .MenuHead .HeartWrapper {
+  width: 30%;
+  font-size: 30px;
 }
 .MainSec .Dishes {
   display: flex;
