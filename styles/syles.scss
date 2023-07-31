@@ -1,0 +1,251 @@
+@import './utilities.scss';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.heroimage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    max-height: 300px;
+}
+
+
+header {
+    @include flexCenterCol;
+    background-color: #dad8d8e7;
+
+    .logo {
+        @include flexCenterRow;
+        background-color: white;
+        width: 100%;
+        font-size: large;
+        height: 3em;
+
+        h1 {
+            font-family: $logoFont !important;
+            width: 100%;
+        }
+
+        .leftarrow {
+            width: 45%;
+            padding-left: 2em;
+
+        }
+
+    }
+
+    img {
+        height: 13em;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.MainSec {
+    position: relative;
+    z-index: 2;
+    border-radius: 50px;
+    top: -7vh;
+    padding: 30px;
+    background-color: rgb(244, 241, 241);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    .MenuHead {
+        @include flexCenterRow;
+        justify-content: space-around;
+
+        h1 {
+            font-family: $logoFont;
+            font-weight: 200;
+            width: 100%;
+        }
+
+        .HeartWrapper {
+            width: 30%;
+            font-size: 30px;
+        }
+    }
+
+    .Dishes {
+        @include flexCenterCol;
+        gap: 2em;
+        justify-content: left;
+        align-items: flex-start;
+        padding-bottom: 3em;
+
+        h2 {
+            @include GreenUnderline;
+        }
+    }
+
+    .click {
+        @include flexCenterRow;
+        border-style: solid;
+        border-radius: 20px;
+        border: #100221;
+        box-shadow: $shadow;
+        height: 5.5em;
+        width: 100%;
+        font-weight: 600;
+        overflow: hidden;
+        background-color: white;
+
+        &--item {
+            width: 100%;
+            padding-left: 2%;
+            padding-bottom: 3%;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin: 0em;
+                padding-top: 1em;
+            }
+
+            p {
+                margin-left: 0em;
+                font-weight: 100;
+                padding-top: 0.5em;
+            }
+        }
+
+        .click--price {
+            padding: 1.5em;
+            transform: translateX(102%);
+            transition: transform 1000ms;
+        }
+
+        &:hover .TickBox,
+        &:active .TickBox,
+        &:hover .click--price,
+        &:active .click--price {
+            transform: translateX(0);
+        }
+    }
+}
+
+.TickBox {
+    @include TickBox;
+}
+
+
+
+.OrderButton {
+    @include flexCenterCol;
+    padding: 3em;
+
+    .btnExplore {
+        @include flexCenterCol;
+        @include button;
+        padding-left: 4.5em;
+        padding-right: 4.5em;
+    }
+}
+
+h3, p{
+    margin:0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #424141;
+    color: white;
+    width: 100%;
+    padding: 1em;
+    gap: 0.5em;
+
+    h4 {
+        font-family: $logoFont;
+        font-weight: 20;
+        margin: 0.2em;
+        padding-left: 0.5em;
+    }
+
+    .NavList {
+        list-style: none;
+        padding-left: 1em;
+    }
+
+    .NavItem {
+        padding: 0.2em;
+    }
+}
+
+.click {
+    font-size: x-small;
+
+    h3 {
+        font-size: x-small;
+        ;
+    }
+}
+
+
+
+@media only screen and (min-device-width: 767px) {
+
+    header,
+    body {
+        display: flex;
+        flex-direction: column;
+
+        flex-wrap: wrap;
+    }
+
+    .MainSec {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+
+    .Dishes {
+        max-width: 35%;
+    }
+
+    .MenuHead,
+    .OrderButton {
+        width: 100%;
+    }
+
+
+
+}
+
+
+
+@media only screen and (min-device-width: 924px) {
+
+    header,
+    body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .Dishes {
+        max-width: 45%;
+    }
+
+    .MainSec {
+        border-radius: 0;
+        padding: 1% 12%;
+        top: 0;
+        justify-content: space-between;
+    }
+
+
+
+}

@@ -1,0 +1,409 @@
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+h4,
+p {
+  margin: 0px !important;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+header,
+body {
+  margin: 0px;
+}
+
+.heartGradientFull:active {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  animation-name: FillHeart;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.HeartWrapper {
+  display: grid;
+}
+.HeartWrapper .fa-regular,
+.HeartWrapper .fa-solid {
+  grid-column: 1;
+  grid-row: 1;
+}
+.HeartWrapper .fa-solid {
+  opacity: 0%;
+}
+.HeartWrapper .fa-regular {
+  color: black;
+}
+
+@keyframes FillHeart {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.spinner {
+  font-size: 75px;
+  position: fixed;
+  left: 45%;
+  animation-name: rotate, appear;
+  animation-duration: 1s, 3s;
+  animation-direction: normal, reverse;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: none, forwards;
+}
+
+header,
+footer,
+.HowItWorks,
+.Restaurants {
+  animation-name: appear;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.click {
+  animation-name: appear;
+}
+.click:nth-child(1) {
+  animation-duration: 1s;
+  transition-delay: 1s;
+}
+.click:nth-child(2) {
+  animation-duration: 2s;
+  transition-delay: 2s;
+}
+.click:nth-child(3) {
+  animation-duration: 3s;
+  transition-delay: 3s;
+}
+.click:nth-child(4) {
+  animation-duration: 4s;
+  transition-delay: 4s;
+}
+.click:nth-child(5) {
+  animation-duration: 5s;
+  transition-delay: 5s;
+}
+.click:nth-child(6) {
+  animation-duration: 6s;
+  transition-delay: 6s;
+}
+.click:nth-child(7) {
+  animation-duration: 7s;
+  transition-delay: 7s;
+}
+.click:nth-child(8) {
+  animation-duration: 8s;
+  transition-delay: 8s;
+}
+.click:nth-child(9) {
+  animation-duration: 9s;
+  transition-delay: 9s;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background-color: #5ac0a4;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.heroimage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  max-height: 300px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(218, 216, 216, 0.9058823529);
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  width: 100%;
+  font-size: large;
+  height: 3em;
+}
+header .logo h1 {
+  font-family: "Shrikhand" !important;
+  width: 100%;
+}
+header .logo .leftarrow {
+  width: 45%;
+  padding-left: 2em;
+}
+header img {
+  height: 13em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.MainSec {
+  position: relative;
+  z-index: 2;
+  border-radius: 50px;
+  top: -7vh;
+  padding: 30px;
+  background-color: rgb(244, 241, 241);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.MainSec .MenuHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.MainSec .MenuHead h1 {
+  font-family: "Shrikhand";
+  font-weight: 200;
+  width: 100%;
+}
+.MainSec .MenuHead .HeartWrapper {
+  width: 30%;
+  font-size: 30px;
+}
+.MainSec .Dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: left;
+  align-items: flex-start;
+  padding-bottom: 3em;
+}
+.MainSec .Dishes h2 {
+  position: relative;
+  font-size: medium;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+}
+.MainSec .click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-style: solid;
+  border-radius: 20px;
+  border: #100221;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  height: 5.5em;
+  width: 100%;
+  font-weight: 600;
+  overflow: hidden;
+  background-color: white;
+}
+.MainSec .click--item {
+  width: 100%;
+  padding-left: 2%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.MainSec .click--item h3 {
+  margin: 0em;
+  padding-top: 1em;
+}
+.MainSec .click--item p {
+  margin-left: 0em;
+  font-weight: 100;
+  padding-top: 0.5em;
+}
+.MainSec .click .click--price {
+  padding: 1.5em;
+  transform: translateX(102%);
+  transition: transform 1000ms;
+}
+.MainSec .click:hover .TickBox, .MainSec .click:active .TickBox, .MainSec .click:hover .click--price, .MainSec .click:active .click--price {
+  transform: translateX(0);
+}
+
+.TickBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(90, 192, 164, 0.6);
+  width: 100px;
+  height: 100px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  transition: transform 1000ms;
+  transform: translateX(102%);
+}
+.TickBox .tick-green {
+  width: 30%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5ac0a4;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.OrderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3em;
+}
+.OrderButton .btnExplore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 3em;
+  border-style: solid;
+  border: #9356DC;
+  border-radius: 40px;
+  color: white;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  padding-left: 4.5em;
+  padding-right: 4.5em;
+}
+
+h3, p {
+  margin: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #424141;
+  color: white;
+  width: 100%;
+  padding: 1em;
+  gap: 0.5em;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-weight: 20;
+  margin: 0.2em;
+  padding-left: 0.5em;
+}
+footer .NavList {
+  list-style: none;
+  padding-left: 1em;
+}
+footer .NavItem {
+  padding: 0.2em;
+}
+
+.click {
+  font-size: x-small;
+}
+.click h3 {
+  font-size: x-small;
+}
+
+@media only screen and (min-device-width: 767px) {
+  header,
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .MainSec {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .Dishes {
+    max-width: 35%;
+  }
+  .MenuHead,
+  .OrderButton {
+    width: 100%;
+  }
+}
+@media only screen and (min-device-width: 924px) {
+  header,
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .Dishes {
+    max-width: 45%;
+  }
+  .MainSec {
+    border-radius: 0;
+    padding: 1% 12%;
+    top: 0;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=syles.css.map */
