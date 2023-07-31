@@ -23,6 +23,13 @@ $card-height: 200px;
     @include flexCenter(row);
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
 
 h4,
 p {
@@ -36,7 +43,7 @@ p {
 header,
 body {
     margin: 0px;
-    
+
 }
 
 @mixin button {
@@ -120,7 +127,7 @@ footer,
     animation-duration: 6s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    
+
 }
 
 @keyframes appear {
@@ -146,42 +153,12 @@ footer,
 
 .click {
     animation-name: appear;
-    
-    &:nth-child(1) {
-        animation-duration: 0s;
-        transition-delay: 0.5s;
-    }
-    &:nth-child(2) {
-        animation-duration: 1s;
-        transition-delay: 1s;
-    }
-    &:nth-child(3) {
-        animation-duration: 2s;
-        transition-delay: 2s;
-    }
-    &:nth-child(4) {
-        animation-duration: 2.5s;
-        transition-delay: 2.5s;
-    }
-    &:nth-child(5) {
-        animation-duration: 3s;
-        transition-delay: 3s;
-    }
-    &:nth-child(6) {
-        animation-duration: 3.5s;
-        transition-delay: 3.5s;
-    }
-    &:nth-child(7) {
-        animation-duration: 4s;
-        transition-delay: 4s;
-    }
-    &:nth-child(8) {
-        animation-duration: 4.5s;
-        transition-delay: 4.5s;
-    }
-    &:nth-child(9) {
-        animation-duration: 5s;
-        transition-delay: 5s;
+
+    @for $childNumber from 1 through 9 {
+        &:nth-child(#{$childNumber}) {
+            animation-duration: $childNumber*1s;
+            transition-delay: $childNumber*1s;
+        }
     }
 
 }
@@ -229,4 +206,3 @@ h2::after {
     height: 3px;
     background-color: #5ac0a4;
 }
-
