@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 a,
 a:visited,
 a:hover,
@@ -152,22 +156,9 @@ h2::after {
 }
 
 /* HEADER */
-.CardLink {
-  text-decoration: none;
-}
-.CardLink .Card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-  box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-}
-.CardLink:active, .CardLink:hover {
-  text-decoration: none;
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -198,7 +189,9 @@ header .Location {
   background-color: rgba(230, 230, 230, 0.9058823529);
   width: 100%;
   height: 3em;
-  margin: 0em;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 40px;
 }
 header .Location .fa-location-dot {
   padding-right: 1em;
@@ -219,10 +212,9 @@ header .btnExplore {
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
-
-* {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+header p {
+  text-align: center;
+  padding: 20px;
 }
 
 .Options__Item {
@@ -238,6 +230,7 @@ header .btnExplore {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
 }
 .HowItWorks h3 {
   padding-right: 10em;
@@ -303,6 +296,7 @@ header .btnExplore {
 }
 .Restaurants h3 {
   padding-right: 10em;
+  padding-top: 2em;
 }
 .Restaurants .FoodCards {
   display: flex;
@@ -335,6 +329,53 @@ header .btnExplore {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 50%;
+}
+
+.CardLink {
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+.CardLink .Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 12px 27px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.CardLink:active, .CardLink:hover {
+  text-decoration: none;
+}
+
+.GreenBox1 {
+  background-color: #99E2D0;
+  position: absolute;
+  top: 48em;
+  right: 3em;
+  width: 15%;
+  height: 4%;
+  z-index: 1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GreenBox2 {
+  background-color: #99E2D0;
+  position: absolute;
+  top: 61.5em;
+  right: 3em;
+  width: 15%;
+  height: 4%;
+  z-index: 1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* FOOTER */
