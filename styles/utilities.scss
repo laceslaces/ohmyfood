@@ -7,6 +7,10 @@ $logoFont: 'Shrikhand';
 $card-width: 300px;
 $card-height: 200px;
 
+a {
+    text-decoration: none;
+}
+
 
 @mixin flexCenter($direction) {
     display: flex;
@@ -179,7 +183,6 @@ footer,
 
 
     .tick-green {
-        width: 30%;
         height: 25px;
         display: flex;
         justify-content: center;
@@ -187,6 +190,8 @@ footer,
         color: #5ac0a4;
         background-color: white;
         border-radius: 50px;
+        height: 25px;
+        width: 25px;
     }
 }
 
@@ -196,6 +201,7 @@ footer,
     font-weight: 400;
     padding-bottom: 0.5em;
 }
+
 
 h2::after {
     content: "";
