@@ -11,7 +11,10 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    position: absolute;
     max-height: 300px;
+    z-index: -1;
+    top: 0px;
 }
 
 
@@ -32,7 +35,7 @@ header {
         }
 
         .leftarrow {
-            width: 45%;
+            width: 25%;
             padding-left: 2em;
 
         }
@@ -50,7 +53,7 @@ header {
     position: relative;
     z-index: 2;
     border-radius: 50px;
-    top: -7vh;
+    margin-top: 200px;
     padding: 30px;
     background-color: rgb(244, 241, 241);
     border-bottom-left-radius: 0px;
@@ -116,9 +119,14 @@ header {
         }
 
         .click--price {
-            padding: 1.5em;
             transform: translateX(102%);
             transition: transform 1000ms;
+            height: 100%;
+            /* width: 100%; */
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 12px;
+            padding-right: 12px;
         }
 
         &:hover .TickBox,
@@ -148,8 +156,9 @@ header {
     }
 }
 
-h3, p{
-    margin:0;
+h3,
+p {
+    margin: 0;
     margin-block-end: 0;
     margin-block-start: 0;
     margin-inline-end: 0;
@@ -189,7 +198,7 @@ footer {
 
     h3 {
         font-size: x-small;
-        ;
+        font-weight: bold;
     }
 }
 
@@ -234,6 +243,8 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
     }
+
+   
 
     .Dishes {
         max-width: 45%;
