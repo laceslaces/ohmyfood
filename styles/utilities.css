@@ -27,7 +27,7 @@ body {
   margin: 0px;
 }
 
-.heartGradientFull:active {
+.heartGradientFull:hover {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -57,14 +57,19 @@ body {
   color: black;
 }
 
+.fa-heart {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
 @keyframes FillHeart {
   from {
-    transform: scaleY(0);
+    transform: scale(0);
     transform-origin: bottom;
     opacity: 0;
   }
   to {
-    transform: scaleY(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -153,4 +158,11 @@ h2::after {
   width: 60%;
   height: 3px;
   background-color: #5ac0a4;
+}
+
+.btnExplore:hover,
+.btnExplore:active {
+  box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.6) !important;
+  filter: brightness(120%) !important;
+  opacity: 0.75;
 }/*# sourceMappingURL=utilities.css.map */

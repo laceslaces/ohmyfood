@@ -2,13 +2,17 @@ $primaryColor: #9356DC;
 $secondaryColor: #FF79DA;
 $tertiaryColor: #99E2D0;
 $midBorderRadius: 40px;
-$shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
+
 $logoFont: 'Shrikhand';
 $card-width: 300px;
 $card-height: 200px;
 
 a {
     text-decoration: none;
+}
+
+@mixin shadow($incrementSize: 5px, $shadowOpacity: 0.3) {
+    box-shadow: 0px $incrementSize $incrementSize -3px rgba(0, 0, 0, $shadowOpacity) !important;
 }
 
 
@@ -57,7 +61,7 @@ body {
     border-radius: $midBorderRadius;
     color: white;
     background: linear-gradient(170deg, $secondaryColor, $primaryColor);
-    box-shadow: $shadow;
+    @include shadow();
 }
 
 @mixin textGradient {
@@ -68,7 +72,7 @@ body {
     background-image: linear-gradient(170deg, $secondaryColor, $primaryColor);
 }
 
-.heartGradientFull:active {
+.heartGradientFull:hover {
     @include textGradient();
 
     animation-name: FillHeart;
@@ -99,15 +103,19 @@ body {
 
 }
 
+.fa-heart {
+    width: fit-content !important;
+}
+
 @keyframes FillHeart {
     from {
-        transform: scaleY(0);
+        transform: scale(0);
         transform-origin: bottom;
         opacity: 0;
     }
 
     to {
-        transform: scaleY(1);
+        transform: scale(1);
         opacity: 1;
     }
 }
@@ -211,4 +219,11 @@ h2::after {
     width: 60%;
     height: 3px;
     background-color: #5ac0a4;
+}
+
+.btnExplore:hover,
+.btnExplore:active {
+    @include shadow(10px, 0.6);
+    filter: brightness(120%) !important;
+    opacity: 0.75;
 }
