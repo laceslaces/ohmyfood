@@ -92,12 +92,13 @@ header {
         border-style: solid;
         border-radius: 20px;
         border: #100221;
-        box-shadow: $shadow;
+        @include shadow();
         height: 5.5em;
         width: 100%;
         font-weight: 600;
         overflow: hidden;
         background-color: white;
+        max-width: 320px;
 
         &--item {
             width: 100%;
@@ -244,7 +245,12 @@ footer {
         flex-wrap: wrap;
     }
 
-   
+    .logo {
+        h1 {
+            text-align: center;
+            padding-right: 6em;
+        }
+    }
 
     .Dishes {
         max-width: 45%;
