@@ -57,6 +57,11 @@ body {
   color: black;
 }
 
+.fa-heart {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
 @keyframes FillHeart {
   from {
     transform: scale(0);
