@@ -49,7 +49,7 @@ header {
     }
 }
 
-.MainSec {
+.Menus {
     position: relative;
     z-index: 2;
     border-radius: 50px;
@@ -215,7 +215,7 @@ footer {
         flex-wrap: wrap;
     }
 
-    .MainSec {
+    .Menus {
         display: flex;
         flex-wrap: wrap;
         column-gap: 10px;
@@ -256,7 +256,7 @@ footer {
         max-width: 45%;
     }
 
-    .MainSec {
+    .Menus {
         border-radius: 0;
         padding: 1% 12%;
         top: 0;

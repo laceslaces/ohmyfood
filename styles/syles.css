@@ -34,7 +34,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
   animation-name: FillHeart;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
@@ -215,7 +215,7 @@ header img {
   width: 100%;
 }
 
-.MainSec {
+.Menus {
   position: relative;
   z-index: 2;
   border-radius: 50px;
@@ -225,23 +225,23 @@ header img {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.MainSec .MenuHead {
+.Menus .MenuHead {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
 }
-.MainSec .MenuHead h1 {
+.Menus .MenuHead h1 {
   font-family: "Shrikhand";
   font-weight: 200;
   width: 100%;
 }
-.MainSec .MenuHead .HeartWrapper {
+.Menus .MenuHead .HeartWrapper {
   width: 30%;
   font-size: 30px;
 }
-.MainSec .Dishes {
+.Menus .Dishes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,13 +251,13 @@ header img {
   align-items: flex-start;
   padding-bottom: 3em;
 }
-.MainSec .Dishes h2 {
+.Menus .Dishes h2 {
   position: relative;
   font-size: medium;
   font-weight: 400;
   padding-bottom: 0.5em;
 }
-.MainSec .click {
+.Menus .click {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,23 +273,23 @@ header img {
   background-color: white;
   max-width: 320px;
 }
-.MainSec .click--item {
+.Menus .click--item {
   width: 100%;
   padding-left: 2%;
   padding-bottom: 3%;
   display: flex;
   flex-direction: column;
 }
-.MainSec .click--item h3 {
+.Menus .click--item h3 {
   margin: 0em;
   padding-top: 1em;
 }
-.MainSec .click--item p {
+.Menus .click--item p {
   margin-left: 0em;
   font-weight: 100;
   padding-top: 0.5em;
 }
-.MainSec .click .click--price {
+.Menus .click .click--price {
   transform: translateX(102%);
   transition: transform 1000ms;
   height: 100%;
@@ -299,7 +299,7 @@ header img {
   padding-bottom: 12px;
   padding-right: 12px;
 }
-.MainSec .click:hover .TickBox, .MainSec .click:active .TickBox, .MainSec .click:hover .click--price, .MainSec .click:active .click--price {
+.Menus .click:hover .TickBox, .Menus .click:active .TickBox, .Menus .click:hover .click--price, .Menus .click:active .click--price {
   transform: translateX(0);
 }
 
@@ -404,7 +404,7 @@ footer .NavItem {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .MainSec {
+  .Menus {
     display: flex;
     flex-wrap: wrap;
     -moz-column-gap: 10px;
@@ -432,7 +432,7 @@ footer .NavItem {
   .Dishes {
     max-width: 45%;
   }
-  .MainSec {
+  .Menus {
     border-radius: 0;
     padding: 1% 12%;
     top: 0;
